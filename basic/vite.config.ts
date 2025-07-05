@@ -1,17 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
 import path from 'path';
+
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: "/",
+  plugins: [react(), tailwindcss()],
+  base: '/',
   resolve: {
-    extensions: [ '.ts', '.tsx' ],
+    extensions: ['.ts', '.tsx'],
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@public' : path.resolve(__dirname, './public'),
+      '@public': path.resolve(__dirname, './public'),
     },
   },
   build: {
@@ -24,7 +25,7 @@ export default defineConfig({
       output: {
         entryFileNames: 'js/[name]min.js',
         assetFileNames: 'assets/[name].[ext]',
-      }
+      },
     },
   },
   server: {
@@ -32,5 +33,5 @@ export default defineConfig({
     port: 9000,
     open: false,
     cors: true,
-  }
+  },
 });

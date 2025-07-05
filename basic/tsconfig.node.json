@@ -22,8 +22,8 @@
     "noUncheckedSideEffectImports": true,
 
     /* optional */
-    "allowJs": true, 
-    "checkJs" : false,
+    "allowJs": true,
+    "checkJs": false,
 
     "jsx": "react-jsx",
 
@@ -39,7 +39,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@public/*": ["public/*"],
+      "@public/*": ["public/*"]
     }
   },
   "include": ["src", "vite.config.ts", "eslint.config.js"],
